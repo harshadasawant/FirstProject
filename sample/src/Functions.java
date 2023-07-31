@@ -16,6 +16,11 @@ public class Functions {
         return a;
     }
 
+    public double showExample(float a, int b) {
+        System.out.println("I am called from function a = " + a+b);
+        return a;
+    }
+
     public static void main(String[] args) {
         Functions obj1 = new Functions();
         obj1.showExample();
