@@ -18,12 +18,12 @@ public class ExceptionExample {
     public static void main(String[] args) throws IOException {
         ExceptionExample obj = new ExceptionExample();
 
-        try {
-            obj.show();
-            obj.show2();
-        }catch(IOException | ArithmeticException  e){
-            e.printStackTrace();
-        }
+//        try {
+////            obj.show();
+////            obj.show2();
+//        }catch(IOException | ArithmeticException  e){
+//            e.printStackTrace();
+//        }
         System.out.println("after try");
 //        try {
 //            obj.show1();
@@ -31,6 +31,9 @@ public class ExceptionExample {
 //            e.printStackTrace();
 //        }
         System.out.println("after runtime exception");
+
+        String s = null;
+        System.out.println(s.equals("Hello"));
 
     }
 }
