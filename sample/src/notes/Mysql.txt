@@ -1,0 +1,38 @@
+create database abc;
+use abc;
+select * from person;
+insert into person (personId,Name, Address) values (1, 'Manisha', 'Mumbai');
+insert into person (personId,Name, Address) values (2, 'Manishaaaa', 'Mumbai');
+update Person  set Name = 'Manisha' where personId = 2;
+delete from person where personId = 2;
+select * from Person where Address = 'Mumbai';
+select Name from Person where Address = 'Mumbai' limit 2;
+select * from Person where Address = 'Mumbai' AND Name ='Harshada';
+select * from Person where Address = 'Mumbai' OR Name ='Harshada';
+select count(*) from Person where Address = 'Mumbai' OR Name ='Harshada';
+ select min(Salary) from Person;
+ select max(Salary) from Person;
+ select sum(Salary) from Person;
+ select avg(Salary) from Person;
+ select count(Salary) from Person;
+ select * from Person where Name like 'H%';
+ select * from Person where Name In ('Harshada','Manisha');
+ select * from Person where Salary between 2000 AND 10000;
+ select p.Name from Person p where Salary between 2000 AND 10000;
+
+  create table Orders (
+    -> OrderId int,
+    -> PersonId int,
+    -> OrderName Varchar(200));
+
+	alter table Person add ManagerId int;
+
+  insert into Orders (1,1,'Shampoo');
+  insert into Orders values (2,3,'oil');
+  insert into Orders values (3,2,'seeds');
+  select * from Person p inner join Orders o on p.PersonId = o.PersonId;
+  select * from Person p left join Orders o on p.PersonId = o.PersonId;
+  select * from Person p right join Orders o on p.PersonId = o.PersonId;
+  select p.Name EmpName,m.Name ManagerName from Person p, Person m where p.ManagerId = m.PersonId
+
+
